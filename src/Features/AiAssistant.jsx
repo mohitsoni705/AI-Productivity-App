@@ -5,6 +5,7 @@ const AiAssistant = () => {
   const [res,setRes]=useState("");
   const [input, setInput] = useState("");
   const [loading,setLoading]=useState(false);
+  const [typedText,setTypedText]=useState("");
 
    const handleGenerateAnswere=async()=>{
     if(!input.trim())return;
@@ -30,7 +31,16 @@ const AiAssistant = () => {
       }
       setLoading(false``)
   }
-  useEffect(()=>{})
+  useEffect(()=>{
+    let i=0;
+    const interval = setInterval(()=>{
+      setTypedText(res.slice(0,i));
+      setLoading(false)
+      i++;
+      if(i>res.length)clearInterval(interval);
+    },20);
+    return()=>clearInterval(interval)
+  },[res])
   const handleInputChange=(e)=>{
     e.preventDefault();
     setInput(e.target.value)
@@ -39,7 +49,9 @@ const AiAssistant = () => {
     <div>
       {/* <p>{res}</p> */}
       <textarea name="input" value={input} placeholder='Enter Your Prompt' id="" onChange={handleInputChange}/>
-      <h1>{res}</h1>
+      <h1>{loading?(
+        <p>Typing response...</p>
+      ):<p>{typedText}</p>}</h1>
       <button onClick={handleGenerateAnswere}>Click me</button>
     </div>
   )

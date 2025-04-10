@@ -50,6 +50,7 @@ img{
 .icons{
   color:white;
   font-size:1rem;
+  margin-right: 0.5rem;
 }
 .side-bar{
   height:100vh;
@@ -138,4 +139,60 @@ button:active{
 }
 .notes-input{
   height: 100vh;
+}
+.box-1{
+  display: flex;
+  flex-direction: column;
+  padding:0.5rem;
+  border-radius: 0.3rem;
+  background-color:white;
+  width:auto;
+  color:rgb(63, 63, 63);
+  font-family: "poppins";
+}
+.box-1 h1{
+  color:rgb(47, 46, 46);
+  font-family: "inter";
+  font-size: 1.5rem;
+}
+.stats{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.box{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.dashboard{
+  height: 100vh;
+  width:70vw;
+  padding-top:3rem;
+  display: flex;
+  flex-direction:column;
+  gap:2rem;
+}
+.task-Over{
+  display: flex;
+  flex-direction: column;
+  list-style:none;
+}
+.task-Over li{
+  height: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center;
+  font-family:"poppins";
+  padding: 0.5rem;
+}
+.task-Over li:hover{
+    background-color: rgb(173, 172, 172);
+    border-radius: 0.2rem;
+}
+.flex-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
