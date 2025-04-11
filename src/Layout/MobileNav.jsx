@@ -20,7 +20,7 @@ const MobileNav = () => {
     <>
     <div className='navbar-mobile'>
       <div>
-        <img src="./public/img/growX(2).png" className='' alt="" />
+        <img src="./img/growX(2).png" className='' alt="" />
       </div>
       <div className='icons ham-button'>
       <GiHamburgerMenu onClick={handleHamButton}/>
