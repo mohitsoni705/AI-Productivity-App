@@ -16,7 +16,7 @@ const Quotes = () => {
         method: "POST",
         data:{
           "contents": [{
-            "parts":[{"text": "Give me a single line quote random everytime"}],
+            "parts":[{"text": "Give me a random single line quote "}],
             }]
            }
           })
