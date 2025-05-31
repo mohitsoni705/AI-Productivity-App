@@ -39,8 +39,9 @@
         width:100vw;
       flex-direction:row;
       justify-content: space-between;
-      height: 5.6rem;
-      padding-inline: 1.5rem;
+      align-items: center;
+      height: 8rem;
+      padding-inline: 2rem;
       background-color:#111827;
     }
     .applayout{
@@ -73,6 +74,10 @@
   transition: all 0.5s;
   }
   .ham-button{
-    padding-top:2rem;
-    font-size:1.4rem
+    font-size:2rem
+  }
+  @media (max-width:600px){
+    html{
+      font-size: 10px;
+    }
   }

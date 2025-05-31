@@ -58,6 +58,7 @@ img{
   justify-content:start;
   /* height: 100vh; */
   gap:1rem;
+  margin: 1rem;
 }
 form{
   display: flex;
@@ -67,8 +68,8 @@ form{
 
 }
 input{
-  padding: 0.5rem;
-  width:30rem;
+  width:26rem;
+  padding: 1rem;
   border-radius: 0.5rem;
   font-family: "poppins";
 }

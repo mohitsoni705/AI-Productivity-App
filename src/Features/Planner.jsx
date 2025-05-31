@@ -30,7 +30,7 @@ const Planner = () => {
         <button onClick={handleAddTask}>add</button>
       </div>
       <div className="planner-grid">
-        {days.map((day) => (
+        {/* {days.map((day) => (
           <div key={day} className="planner-day">
             <h3>{day}</h3>
             <ul>
@@ -39,7 +39,7 @@ const Planner = () => {
               ))}
             </ul>
           </div>
-        ))}
+        ))} */}
       </div>
     </div>
   )

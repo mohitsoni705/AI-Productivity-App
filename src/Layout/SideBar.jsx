@@ -10,7 +10,9 @@ const SideBar = () => {
   return (
     <div className='side-bar'>
       <div className="logo">
-        <img src="./img/growX(2).png" alt="" />
+        <NavLink to="/">
+        <img src="./img/growX(2).png"/>
+        </NavLink>
       </div>
       <div className="navbar">
         <ul className='nav-link'>
