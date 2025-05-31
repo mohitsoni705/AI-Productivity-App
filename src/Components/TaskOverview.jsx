@@ -16,7 +16,6 @@ const TaskOverview = () => {
     })
     return ()=>unsubscribe();
   },[]);
-  console.log(todos)
   return (
     <div className='box-1'>
       <div className='flex-row'>
@@ -25,9 +24,7 @@ const TaskOverview = () => {
       </div>
       <ul className='task-Over'>
         {todos.slice(0,6).map((curElem)=>(
-          <>
            <li key={curElem.id}>{curElem.text}</li>
-           </>
         ))}
       </ul>
     </div>

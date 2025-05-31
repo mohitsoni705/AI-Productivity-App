@@ -65,7 +65,6 @@ const Todo = () => {
       <div className='todo-list'>
       <ul>
           {todos.map((curElem) => (
-            <>
           <li key={curElem.id}>
             {curElem.text}
             <div className='gap-1'>
@@ -73,10 +72,7 @@ const Todo = () => {
             <button onClick={() => handleUpdate(curElem.id, prompt("Update todo:", curElem.text))}>✏️</button>
             </div>
           </li>
-            <hr/>
-            </>
         ))}
-      
       </ul>
       </div>
     </div>

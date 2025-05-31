@@ -1,15 +1,19 @@
 import React, { useEffect, useState } from 'react'
 
 const TimePomodoro = () => {
-  const date= new Date();
-  const time = new Date();
-  const getDate=date.toLocaleDateString();
-  let getTime = time.toLocaleTimeString();
-
+  const [currTime ,setCurrTime] = useState("");
+  useEffect(() => {
+    const interval = setInterval(()=>{
+      const now = new Date();
+      const getTime = now.toLocaleTimeString();
+      setCurrTime(getTime)
+    },1000);
+    return ()=>clearInterval(interval)
+    },[])
   return (
     <div className='box-1'>
-      <h1>Time: {getTime}</h1>
-      <div>time left in Pomodoro</div>
+      <h1>Time: {currTime}</h1>
+      <div>Current Time</div>
     </div>
   )
 }
