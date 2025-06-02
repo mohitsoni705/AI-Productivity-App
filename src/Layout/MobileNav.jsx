@@ -16,6 +16,9 @@ const MobileNav = () => {
       setToggle(true)
     }
   }
+  const handleCloseButton=()=>{
+    setToggle(false)
+  }
   return (
     <>
     <div className='navbar-mobile'>
@@ -30,11 +33,11 @@ const MobileNav = () => {
     </div>
       <div className={toogle?"mobile-links":"none"}>
       <ul>
-          <NavLink to="/"><li><TiHomeOutline className='icons'/> Home</li></NavLink>
-                <NavLink to="todo-list"> <li><FaRegSquareCheck className='icons'/> To Do List</li></NavLink>
-                <NavLink to="notes"><li><TbNotes className='icons'/> Notes</li></NavLink>
-                <NavLink to="planner"> <li><SlCalender className='icons'/> Planner</li></NavLink>
-                <NavLink to="aiassistant"> <li><RiVoiceprintFill className='icons'/> AI Assistant</li></NavLink>
+          <NavLink to="/" onClick={handleCloseButton}><li><TiHomeOutline className='icons'/> Home</li></NavLink>
+                <NavLink to="todo-list" onClick={handleCloseButton}> <li><FaRegSquareCheck className='icons'/> To Do List</li></NavLink>
+                <NavLink to="notes" onClick={handleCloseButton}><li><TbNotes className='icons'/> Notes</li></NavLink>
+                <NavLink to="planner" onClick={handleCloseButton}> <li><SlCalender className='icons'/> Planner</li></NavLink>
+                <NavLink to="aiassistant" onClick={handleCloseButton}> <li><RiVoiceprintFill className='icons'/> AI Assistant</li></NavLink>
       </ul>
       </div>
       </>
