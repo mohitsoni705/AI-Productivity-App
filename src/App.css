@@ -30,6 +30,45 @@
     background-color:#111827;
     border-radius:0rem 0.5rem 0.5rem 0rem;
 }
+/* Common fade-in settings */
+.fade-in {
+  opacity: 0;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+/* Fade in from left to right */
+.fade-in-left {
+  animation-name:fadeInLeft;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Fade in from bottom to top */
+.fade-in-bottom {
+  animation-name: fadeInBottom;
+}
+
+@keyframes fadeInBottom {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media screen and (max-width:800px){
     .nav-mob{
       display: block;

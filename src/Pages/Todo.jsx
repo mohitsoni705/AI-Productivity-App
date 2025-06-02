@@ -50,7 +50,7 @@ const Todo = () => {
   }
 
   return (
-    <div className='todo'>
+    <div className='todo fade-in fade-in-bottom'>
       <div className='todo-heading'>
         <h1>Todo List</h1>
       </div>

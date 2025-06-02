@@ -47,7 +47,7 @@ const Notes = () => {
     await deleteDoc(noteDoc);
   }
   return (
-    <div className='notes'>
+    <div className='notes fade-in fade-in-bottom'>
       <div>
         <h1>📝My Notes</h1>
       </div>

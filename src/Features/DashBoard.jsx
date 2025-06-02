@@ -10,7 +10,7 @@ import AiChatBox from '../Components/AiChatBox'
 const DashBoard = () => {
   return (
       <div className='right-Bar'>
-        <div className="dashboard">
+        <div className="dashboard fade-in fade-in-left">
         {/* section1 */}
       <div >
       <header>
@@ -19,22 +19,22 @@ const DashBoard = () => {
       </div>
       {/* section 2 */}
       <div className="stats">
-        <div className="today">
+        <div className="today fade-in fade-in-bottom">
           <TaskToday/>
         </div>
-        <div className="notes-saved">
+        <div className="notes-saved fade-in fade-in-bottom">
           <NotesSaved/>
           </div>
-        <div className="pomodoro">
+        <div className="pomodoro fade-in fade-in-bottom">
          <TimePomodoro/>
         </div>
       </div>
       {/* section 3 */}
-      <div className="quotes">
+      <div className="quotes fade-in fade-in-left">
           <Quotes/>
       </div>
         {/* section 4 */}
-      <div className="task-overview">
+      <div className="task-overview fade-in fade-in-left">
         <TaskOverview/>
         </div>
       </div>
