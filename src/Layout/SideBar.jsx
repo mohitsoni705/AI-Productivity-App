@@ -21,6 +21,7 @@ const SideBar = () => {
         <NavLink to="notes"><li><TbNotes className='icons'/> Notes</li></NavLink>
         <NavLink to="planner"> <li><SlCalender className='icons'/> Planner</li></NavLink>
         <NavLink to="aiassistant"> <li><RiVoiceprintFill className='icons'/> AI Assistant</li></NavLink>
+        <NavLink to="signin"> <li><RiVoiceprintFill className='icons'/> Sign-in</li></NavLink>
         </ul>
       </div>
     </div>

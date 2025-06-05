@@ -6,6 +6,7 @@ import Notes from './Features/Notes'
 import AiAssistant from './Features/AiAssistant'
 import TodoList from './Features/TodoList'
 import Planner from './Features/Planner'
+import SignIn from './Pages/SignIn'
 
 const App = () => {
   const router = createBrowserRouter([
@@ -30,6 +31,10 @@ const App = () => {
         },{
           path:"/todo-list",
           element:<TodoList/>
+        },
+        ,{
+          path:"/signin",
+          element:<SignIn/>
         }
       ]
     }
