@@ -6,6 +6,8 @@ import NotesSaved from '../Components/NotesSaved'
 import TimePomodoro from '../Components/TimePomodoro'
 import TaskOverview from '../Components/TaskOverview'
 import AiChatBox from '../Components/AiChatBox'
+import Pomodoro from '../Pages/Pomodoro'
+import PomoDashboard from '../Components/PomoDashboard'
 
 const DashBoard = () => {
   return (
@@ -25,6 +27,9 @@ const DashBoard = () => {
         <div className="notes-saved fade-in fade-in-bottom">
           <NotesSaved/>
           </div>
+        <div className="pomodoro fade-in fade-in-bottom">
+         <PomoDashboard/>
+        </div>
         <div className="pomodoro fade-in fade-in-bottom">
          <TimePomodoro/>
         </div>

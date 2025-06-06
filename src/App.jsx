@@ -7,6 +7,7 @@ import AiAssistant from './Features/AiAssistant'
 import TodoList from './Features/TodoList'
 import Planner from './Features/Planner'
 import SignIn from './Pages/SignIn'
+import Pomodoro from './Pages/Pomodoro'
 
 const App = () => {
   const router = createBrowserRouter([
@@ -32,7 +33,11 @@ const App = () => {
           path:"/todo-list",
           element:<TodoList/>
         },
-        ,{
+        {
+          path:"/pomodoro",
+          element:<Pomodoro/>
+        },
+        {
           path:"/signin",
           element:<SignIn/>
         }
