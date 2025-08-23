@@ -14,7 +14,7 @@ const AiAssistant = () => {
     try{
     const response = await axios(
       {
-        url:"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyCrz37pUzovSbdx5GySxs5ZenT4SitzvOk",
+        url:"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyBfK-N1ahdmsy9P3p9HzDZtfMriz6eKTjU",
     method: "POST",
     data:{
       "contents": [{

@@ -3,6 +3,8 @@ import React, { use, useEffect, useRef, useState } from 'react'
 const PomodoroBox = () => {
     const [pomodoroTime, setPomodoroTime] = useState(1500);
     const [isRunning, setIsRunning] = useState(false);
+    const [inputButton , setInputButton] = useState(false);
+
     const intervalRef = useRef(null);
     const formatTime = (pomodoroTime) => {
         const minutes = Math.floor(pomodoroTime / 60);
@@ -46,7 +48,8 @@ const PomodoroBox = () => {
       <div>
         <p className='timer-display'>{formatTime(pomodoroTime)}</p>
       </div>
-      <div><button>Edit</button></div>
+      <div><button onClick={()=>handleInputButton}>Edit</button>
+      </div>
       <div className='button-group'>
         <button className='start-button' onClick={handleStartButton}>Start</button>
         <button className='reset-button' onClick={handleResetButton}>Reset</button>

@@ -1,0 +1,2 @@
+"use strict";(self["app-home_v1_jsonp"]=self["app-home_v1_jsonp"]||[]).push([[22408],{22408:(e,o,n)=>{n.d(o,{N:()=>s});var p=n(922),c=n(71124);const s=(e,o)=>{(0,c.useEffect)((()=>((0,p.Y)({componentName:e,componentLifeCycle:"Loading"},o),()=>{(0,p.Y)({componentName:e,componentLifeCycle:"Unload"})})),[e,o])}}}]);
+//# sourceMappingURL=https://artifacts.dev.azure.com/office/_apis/symbol/symsrv/app-home_v1_22408_ec9e04fe6c849c0180bb.bundle.js.map/2f69680a1618469aa82e60f4ba1b70d7/app-home_v1_22408_ec9e04fe6c849c0180bb.bundle.js.map
