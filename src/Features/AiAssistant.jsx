@@ -6,7 +6,7 @@ const AiAssistant = () => {
   const [input, setInput] = useState("");
   const [loading,setLoading]=useState(false);
   const [typedText,setTypedText]=useState("");
-
+  const API = import.meta.env.VITE_API; 
    const handleGenerateAnswere=async()=>{
     if(!input.trim())return;
     setLoading(true);
@@ -14,7 +14,7 @@ const AiAssistant = () => {
     try{
     const response = await axios(
       {
-        url:"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyBfK-N1ahdmsy9P3p9HzDZtfMriz6eKTjU",
+        url:`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API}`,
     method: "POST",
     data:{
       "contents": [{

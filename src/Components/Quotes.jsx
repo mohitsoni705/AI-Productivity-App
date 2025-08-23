@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom';
 const Quotes = () => {
   const [quote,setQuote]=useState("");
   const [loading,setLoading]=useState(false);
+  const API = import.meta.env.VITE_API; // if using Vite
 
   const handleQuotes=async()=>{
   try{
@@ -12,7 +13,7 @@ const Quotes = () => {
       setLoading(true)
     }
    const response = await axios({
-        url:"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyBfK-N1ahdmsy9P3p9HzDZtfMriz6eKTjU",
+        url:`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API}`,
         method: "POST",
         data:{
           "contents": [{
