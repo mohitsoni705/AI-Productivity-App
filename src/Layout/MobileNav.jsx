@@ -38,6 +38,7 @@ const MobileNav = () => {
                 <NavLink to="notes" onClick={handleCloseButton}><li><TbNotes className='icons'/> Notes</li></NavLink>
                 <NavLink to="planner" onClick={handleCloseButton}> <li><SlCalender className='icons'/> Planner</li></NavLink>
                 <NavLink to="aiassistant" onClick={handleCloseButton}> <li><RiVoiceprintFill className='icons'/> AI Assistant</li></NavLink>
+                <NavLink to="signin" onClick={handleCloseButton}> <li><RiVoiceprintFill className='icons'/>Sign Up</li></NavLink>
       </ul>
       </div>
       </>

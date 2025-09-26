@@ -2,16 +2,30 @@ import React from 'react'
 
 const SignIn = () => {
   return (
-    <div>
+    <div className='red'>
+      <div className='signUpHead'>
       <div>
-        <h1>Signup</h1>
+        <h1>Signup to</h1>
+        <p className='signUpHeadP'>Creative</p>
       </div>
       <div>
-        <form className=''>
-          <label>Name:</label>
-          <input type="text" placeholder='Enter username' />
-          <label>Password:</label>
-          <input type="password" placeholder='Enter passaword' />
+        <p>Already a user?</p>
+        <p>Log in here</p>
+      </div>
+      </div>
+      <div>
+        <form className='signUpForm'>
+          <label>Your Full Name</label>
+          <input type="text" className='signpUpInput' />
+          <label>Your Email Address</label>
+          <input type="text" className='signpUpInput'/>
+          <label>Create a password</label>
+          <input type="text" className='signpUpInput'/>
+          <div className='signUpCheck'>
+          <input type="radio"/>
+          <label>I agree to the Terms of Service and Privacy Policy</label>
+          </div>
+          <button type='submit'>Create Account</button>
         </form>
 
       </div>
