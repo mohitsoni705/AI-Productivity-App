@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
+import { AiOutlineWechat } from "react-icons/ai";
 
 const AiAssistant = () => {
   const [res,setRes]=useState("");
@@ -46,14 +47,27 @@ const AiAssistant = () => {
     setInput(e.target.value)
   }
   return (
-    <div>
-      {/* <p>{res}</p> */}
-      <textarea name="input" value={input} placeholder='Enter Your Prompt' id="" onChange={handleInputChange}/>
-      <h1>{loading?(
-        <p>Typing response...</p>
-      ):<p>{typedText}</p>}</h1>
-      <button onClick={handleGenerateAnswere}>Click me</button>
-    </div>
+    <div className="chat-box"> 
+
+  <div className="header">
+    <AiOutlineWechat />
+    <h1>AI ASSISTANT</h1>
+  </div> 
+
+  <div className="response">
+    {loading ? <p>Typing response...</p> : <p>{typedText}</p>}
+  </div>
+
+  <div className="input-area">
+    <input
+      name="input"
+      value={input}
+      placeholder="Enter Your Prompt"
+      onChange={handleInputChange}
+    />
+    <button onClick={handleGenerateAnswere}>Click me</button>
+  </div>
+</div>
   )
 }
 

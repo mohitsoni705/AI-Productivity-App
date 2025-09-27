@@ -2,7 +2,7 @@ import React from 'react'
 
 const SignIn = () => {
   return (
-    <div className='red'>
+    <div className='signUpUi'>
       <div className='signUpHead'>
       <div>
         <h1>Signup to</h1>
