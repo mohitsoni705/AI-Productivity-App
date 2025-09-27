@@ -282,18 +282,8 @@ button:active{
   transition: all 0.3s;
   background-color:#F4B155;
 }
-/* .chat-box{
-  border:1px solid black;
-  height: 80vh;
-  background-color:white;
-  border-radius: 0.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding:1rem;
-  gap:1rem;
-} */ 
-.chat-box { /* red background */
+
+.chat-box { 
   width: 30rem;
   margin: 1.2rem auto;
   padding: 1.2rem;
