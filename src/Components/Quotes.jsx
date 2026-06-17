@@ -13,7 +13,7 @@ const Quotes = () => {
       setLoading(true)
     }
    const response = await axios({
-        url:`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API}`,
+        url:`https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=${API}`,
         method: "POST",
         data:{
           "contents": [{

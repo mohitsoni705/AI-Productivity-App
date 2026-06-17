@@ -126,11 +126,13 @@
     display: flex;
     flex-direction: column;
     gap:3rem;
-    border: 2px solid black;
+    border: 2px solid gray;
+    border-radius: 10%;
   }
   .signUpForm{
     display: flex;
     flex-direction: column;
+    border-radius: 10px;
   }
   .signUpHead{
     display: flex;

@@ -1,44 +1,48 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import { AiOutlineWechat } from "react-icons/ai";
 
 const AiAssistant = () => {
   const [res,setRes]=useState("");
   const [input, setInput] = useState("");
   const [loading,setLoading]=useState(false);
   const [typedText,setTypedText]=useState("");
-  const API = import.meta.env.VITE_API; 
-   const handleGenerateAnswere=async()=>{
-    if(!input.trim())return;
+  const API = import.meta.env.VITE_API || "AIzaSyCDzP3i0T_7acFeGaYPHf4VJ5kZ7PRG8P0";
+
+  const handleGenerateAnswer = async () => {
+    const prompt = input.trim();
+    if (!prompt) return;
+
     setLoading(true);
     setRes("");
-    try{
-    const response = await axios(
-      {
-        url:`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API}`,
-    method: "POST",
-    data:{
-      "contents": [{
-        "parts":[{"text": input}]
-        }]
-       }
-       });
-       console.log(response["data"]["candidates"][0]["content"]["parts"][0]["text"]);
-       setRes(response["data"]["candidates"][0]["content"]["parts"][0]["text"])
-       setInput("");
-      }catch(error){
-        console.log("Error",error);
-        setRes("Oops! Something went wrong.");
-      }
-      setLoading(false``)
-  }
+
+    try {
+      const response = await axios.post(
+        `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=${API}`,
+        {
+          contents: [
+            {
+              parts: [{ text: prompt }],
+            },
+          ],
+        }
+      );
+
+      const answer = response?.data?.candidates?.[0]?.content?.parts?.[0]?.text;
+      setRes(answer || "No response from API.");
+      setInput("");
+    } catch (error) {
+      console.error("Error", error);
+      setRes("Oops! Something went wrong.");
+    } finally {
+      setLoading(false);
+    }
+  };
   useEffect(()=>{
     let i=0;
     const interval = setInterval(()=>{
       setTypedText(res.slice(0,i));
-      setLoading(false)
       i++;
-      if(i>res.length)clearInterval(interval);
+      if(i>res.length) clearInterval(interval);
     },20);
     return()=>clearInterval(interval)
   },[res])
@@ -47,27 +51,36 @@ const AiAssistant = () => {
     setInput(e.target.value)
   }
   return (
-    <div className="chat-box"> 
+    <div className='notes fade-in fade-in-bottom'>
+      <div className='box'>
+        <div>
+          <h1 className='ai-chat-title'>AI Assistant</h1>
+          <p className='assistant-subtitle'>Ask questions, summarize text, or get ideas quickly.</p>
+        </div>
+      </div>
 
-  <div className="header">
-    <AiOutlineWechat />
-    <h1>AI ASSISTANT</h1>
-  </div> 
+      <div className='box-1 ai-chat-card'>
+        <div className='ai-response'>
+          {loading ? (
+            <p>Typing response...</p>
+          ) : (
+            <p>{typedText || 'Your AI response will appear here.'}</p>
+          )}
+        </div>
 
-  <div className="response">
-    {loading ? <p>Typing response...</p> : <p>{typedText}</p>}
-  </div>
+        <textarea
+          className='notes-input ai-textarea'
+          name='input'
+          value={input}
+          placeholder='Type your prompt here...'
+          onChange={handleInputChange}
+        />
 
-  <div className="input-area">
-    <input
-      name="input"
-      value={input}
-      placeholder="Enter Your Prompt"
-      onChange={handleInputChange}
-    />
-    <button onClick={handleGenerateAnswere}>Click me</button>
-  </div>
-</div>
+        <button className='ai-send-button' onClick={handleGenerateAnswer}>
+          Send
+        </button>
+      </div>
+    </div>
   )
 }
 
